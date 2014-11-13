@@ -1,0 +1,8 @@
+<h1>All Customers without Emails</h1>
+<%= link_to 'New Customer', new_customer_path %>
+<span> - </span>
+<%= link_to 'Main Page',  root_path %>
+<br/>
+<% @customers.each do |customers|%>
+  <%= render customers %>
+<% end %>

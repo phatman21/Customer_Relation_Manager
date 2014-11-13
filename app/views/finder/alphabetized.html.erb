@@ -1,0 +1,6 @@
+<h1>All Customers in Alphabetical Order</h1>
+<%= link_to 'New Customer', new_customer_path %>
+<br/>
+<% @customers.each do |customers|%>
+  <%= render customers %>
+<% end %>

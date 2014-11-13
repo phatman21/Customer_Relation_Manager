@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   resources :customers
 
+  # resources :finder, controller: 'finder'
+
+  get 'missing_email', to: 'finder#missing_email', as: 'missing_email'
+  get 'alphabetized', to: 'finder#alphabetized', as: 'alphabetized'
+  # "GET /"  Loads the index action of the finder controller
+  root 'finder#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

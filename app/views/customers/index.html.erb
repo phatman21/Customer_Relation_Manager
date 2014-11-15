@@ -3,8 +3,9 @@
 
 <br>
 
-<%= render partial: customer,
-           collection: @customers %>
+<% @customers.each do |customers|%>
+  <%= render customers %>
+<% end %>
 
 <br>
 

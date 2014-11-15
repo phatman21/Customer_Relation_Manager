@@ -15,10 +15,12 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
+    @province = Province.all 
   end
 
   # GET /customers/1/edit
   def edit
+    @province = Province.all 
   end
 
   # POST /customers
@@ -69,6 +71,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:fullname, :phonenumber, :email, :image, :notes)
+      params.require(:customer).permit(:fullname, :phonenumber, :email, :image, :notes, :province_id)
     end
 end
